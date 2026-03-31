@@ -1,9 +1,18 @@
-print('Iniciando o sistema de IA...')
+import math
 
-# O input pede o valor e o float transforma o texto digitado em número
-pergunta_usuario1 = float(input("Digite o valor da distância 1: "))
-pergunta_usuario2 = float(input("Digite o valor da distância 2: "))
+print('--- Motor de IA: Calculadora Vetorial ---')
 
-# Calcula e mostra o resultado
-distancia = pergunta_usuario1 - pergunta_usuario2
-print('Distancia calculada:', distancia)
+# Pegando as coordenadas do texto do usuário (Vetor 1)
+print("Vetor da Pergunta (ex: 2 e 3):")
+x1 = float(input("Coordenada X1: "))
+y1 = float(input("Coordenada Y1: "))
+
+# Pegando as coordenadas do Banco de Dados (Vetor 2)
+print("\nVetor do Banco de Dados (ex: 5 e 7):")
+x2 = float(input("Coordenada X2: "))
+y2 = float(input("Coordenada Y2: "))
+
+# O coração do RAG: Calculando a Distância Euclidiana
+distancia = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+print(f'\nA Distância Euclidiana entre os vetores é: {distancia:.2f}')
