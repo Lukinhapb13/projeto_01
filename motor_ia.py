@@ -1,4 +1,9 @@
 print('Iniciando o sistema de IA...')
-pergunta_usuario = 10
-dado_banco = 5
-print('Distancia vetorial calculada:', pergunta_usuario - dado_banco)
+
+# O input pede o valor e o float transforma o texto digitado em número
+pergunta_usuario1 = float(input("Digite o valor da distância 1: "))
+pergunta_usuario2 = float(input("Digite o valor da distância 2: "))
+
+# Calcula e mostra o resultado
+distancia = pergunta_usuario1 - pergunta_usuario2
+print('Distancia calculada:', distancia)
